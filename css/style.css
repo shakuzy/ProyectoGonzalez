@@ -14,21 +14,21 @@ header {
   color: white;
   justify-content: space-around;
   align-self: center;
+  margin: 6vh;
 }
 
-header div a img {
-  margin-top: 30px;
-  margin-bottom: 30px;
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header nav ul {
-  margin-top: 50px;
-  /* margin-bottom: 50px; */
+  display: flex;
   list-style-type: none;
 }
 
 header nav ul li {
-  display: inline-block;
   margin-right: 10px;
 }
 
@@ -40,18 +40,69 @@ header nav ul li a {
 
 /* INICIO SECCION FOOTER  */
 
-footer div {
-  display: inline-block;
-  margin: 5% 12%;
-  width: 9vw;
+footer {
+  margin: 12vh 24vh;
+  display: grid;
+  grid-template-areas:
+    "columnaFooter1 columnaFooter2 columnaFooter3"
+    "filaFooter1 filaFooter1 filaFooter1";
+  gap: 8%;
 }
-footer div img {
-  margin: 0% 0% 12% 0%;
+#columnafooter1 {
+  grid-area: columnaFooter1;
+}
+#columnaFooter2 {
+  grid-area: columnaFooter2;
+}
+#columnaFooter3 {
+  grid-area: columnaFooter3;
+}
+#filaFooter1 {
+  grid-area: filaFooter1;
 }
 
-footer p {
-  text-align: center;
-  margin-bottom: 5%;
+.grillaSocialMedia img {
+  width: 32px;
+  height: 32px;
+}
+
+.grillaSocialMedia {
+  display: grid;
+  grid-template-areas:
+    "logoFb logoTw logoIg"
+    "logoWsp logoTele logoLi";
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  gap: 10% 1%;
+  margin: 5%;
+}
+
+#logoFb {
+  grid-area: logoFb;
+}
+#logoTw {
+  grid-area: logoTw;
+}
+#logoIg {
+  grid-area: logoIg;
+}
+#logoWsp {
+  grid-area: logoWsp;
+}
+#logoTele {
+  grid-area: logoTele;
+}
+#logoLi {
+  grid-area: logoLi;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 footer a {
@@ -61,39 +112,44 @@ footer a {
 /*FIN SECCION FOOTER  */
 
 /* INICIO SECCION INDEX */
-#mainIndex section {
-  display: inline-block;
-  margin: 1% 4% 1% 12%;
+
+#mainIndex {
+  display: flex;
+  /* margin: 1% 4% 1% 12%; */
+  justify-content: space-evenly;
 }
 
 #destacado {
-  width: 29%;
+  margin-left: 8%;
+  width: 37vw;
 }
 #todos {
-  width: 22%;
+  width: 21vw;
+  margin-right: 16%;
 }
-
+/*
 #destacado button {
   margin: 5% 0% 5% 0%;
 }
 #destacado h1 {
   margin: 0% 0% 5% 0%;
 }
-#destacado table {
-  margin: 0% 0% 5% 0%;
-}
-
 #todos button {
   margin: 5% 0% 5% 0%;
 }
 #todos h3 {
   margin: 0% 0% 5% 0%;
+} */
+
+#destacado table {
+  margin: 0% 0% 5% 0%;
 }
+
 #todos table {
   margin: 0% 0% 5% 0%;
 }
 .tablaPartidos {
-  width: 116%;
+  width: 100%;
 }
 .tablaPartidos .cabecera {
   background-color: black;
@@ -226,7 +282,7 @@ footer a {
   display: inline-block;
 }
 
-img{
+img {
   width: 100%;
 }
 
@@ -236,7 +292,7 @@ img{
   background-color: white;
   padding: 1%;
 }
-#detalle{
+#detalle {
   display: inline-block;
   width: 57%;
 }
