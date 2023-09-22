@@ -7,6 +7,7 @@ body {
   background-color: #0e422b;
   color: white;
 }
+
 /* INICIO SECCION HEADER  */
 header {
   display: flex;
@@ -16,22 +17,18 @@ header {
   align-self: center;
   margin: 6vh;
 }
-
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 header nav ul {
   display: flex;
   list-style-type: none;
 }
-
 header nav ul li {
   margin-right: 10px;
 }
-
 header nav ul li a {
   color: white;
   text-decoration: none;
@@ -39,7 +36,6 @@ header nav ul li a {
 /*FIN SECCION HEADER  */
 
 /* INICIO SECCION FOOTER  */
-
 footer {
   margin: 12vh 24vh;
   display: grid;
@@ -60,12 +56,10 @@ footer {
 #filaFooter1 {
   grid-area: filaFooter1;
 }
-
 .grillaSocialMedia img {
   width: 32px;
   height: 32px;
 }
-
 .grillaSocialMedia {
   display: grid;
   grid-template-areas:
@@ -78,7 +72,6 @@ footer {
   gap: 10% 1%;
   margin: 5%;
 }
-
 #logoFb {
   grid-area: logoFb;
 }
@@ -97,14 +90,12 @@ footer {
 #logoLi {
   grid-area: logoLi;
 }
-
 footer div {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-
 footer a {
   text-decoration: none;
   color: white;
@@ -112,13 +103,14 @@ footer a {
 /*FIN SECCION FOOTER  */
 
 /* INICIO SECCION INDEX */
-
+#btnConfiguraciones {
+  display: none;
+}
 #mainIndex {
   display: flex;
   /* margin: 1% 4% 1% 12%; */
   justify-content: space-evenly;
 }
-
 #destacado {
   margin-left: 8%;
   width: 37vw;
@@ -127,24 +119,17 @@ footer a {
   width: 21vw;
   margin-right: 16%;
 }
-/*
-#destacado button {
-  margin: 5% 0% 5% 0%;
-}
 #destacado h1 {
   margin: 0% 0% 5% 0%;
 }
-#todos button {
-  margin: 5% 0% 5% 0%;
-}
 #todos h3 {
   margin: 0% 0% 5% 0%;
-} */
-
-#destacado table {
-  margin: 0% 0% 5% 0%;
 }
-
+.botonera {
+  display: flex;
+  justify-content: space-between;
+  margin: 1vw 13vw;
+}
 #todos table {
   margin: 0% 0% 5% 0%;
 }
@@ -160,9 +145,7 @@ footer a {
 .tablaPartidos tbody tr td {
   border-bottom: 1px solid #ccc;
   padding: 15px;
-  padding: 15px;
 }
-
 .dataHora,
 .dataVerMas {
   background-color: #420e25;
@@ -174,22 +157,19 @@ footer a {
   background-color: white;
   color: black;
 }
-
 #destacado button,
-#todos button {
+#todos button,
+#btnConfiguraciones {
   color: #420e25;
   background-color: white;
   padding: 1%;
 }
-
 /* FIN SECCION INDEX */
 
 /* INICIO SECCION CONTACTO */
-
 #formulario {
   margin: 12%;
 }
-
 #formulario form div {
   display: inline-block;
   width: 49%;
@@ -199,63 +179,51 @@ footer a {
   width: 86%;
   padding: 3%;
 }
-
 #formulario form div #consulta {
   padding-bottom: 21%;
 }
-
 #formulario button {
   width: 95%;
   color: #420e25;
   background-color: white;
   padding: 1%;
 }
-
 /* FIN SECCION CONTACTO */
 
 /* INICIO SECCION QUIENES SOMOS */
-
 #quienesSomos {
   margin: 12%;
 }
-
 #quienesSomos img {
   width: 80vw;
 }
-
 /* FIN SECCION QUIENES SOMOS */
 
 /* INICIO SECCION LIGA ARGENTINA */
-
 #ligaArgentina {
   margin: 5% 12% 12% 12%;
 }
-
+#ligaArgentina #tituloImg {
+  display: flex;
+  gap: 1%;
+}
 #ligaArgentina #tituloImg img {
   width: 40px;
-  display: inline-block;
 }
-
-#ligaArgentina #tituloImg h1 {
-  display: inline-block;
+#ligaArgentina #botonera {
+  display: flex;
+  justify-content: space-around;
+  margin: 2vw 0vw;
 }
 #ligaArgentina #botonera button {
-  margin: 3%;
   color: #420e25;
   background-color: white;
   padding: 1%;
 }
-
-#ligaArgentina .tablas,
-#ligaArgentina .tablas .tablaGeneral,
-#ligaArgentina .tablas .listadoPartidos {
-  display: inline-block;
+#ligaArgentina .tablas {
+  display: flex;
+  justify-content: space-between;
 }
-
-#ligaArgentina .tablas .tablaGeneral table {
-  margin: 10% 0% 0% 0%;
-}
-
 #ligaArgentina .tablas .tablaGeneral table thead {
   background-color: black;
   color: white;
@@ -268,7 +236,6 @@ footer a {
   margin-left: 50px;
   padding: 12px;
 }
-
 .dataVerMas a {
   text-decoration: none;
   color: white;
@@ -276,16 +243,13 @@ footer a {
 /* FIN SECCION LIGA ARGENTINA */
 
 /* INICIO SECCION DETALLE PARTIDO */
-
 #detallePartido {
   margin: 0% 13%;
   display: inline-block;
 }
-
 img {
   width: 100%;
 }
-
 #detallePartido #detalle button {
   margin: 3%;
   color: #420e25;
@@ -309,13 +273,11 @@ img {
 #escudo {
   width: 40px;
 }
-
 #detalle {
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
-
 #estructuraDetalle div table thead {
   background-color: black;
   color: white;
@@ -328,5 +290,61 @@ img {
   margin-left: 50px;
   padding: 12px;
 }
-
 /* FIN SECCION DETALLE PARTIDO */
+
+/*MEDIA QUERIES INDEX*/
+
+@media screen and (max-width: 600px) {
+  #mainIndex {
+    flex-direction: column;
+  }
+
+  #mainIndex,
+  #destacado,
+  #todos,
+  .botonera {
+    margin: 0;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  #destacado,
+  #todos {
+    width: 0;
+  }
+
+  .tablaPartidos tbody tr td {
+    padding: 10px;
+  }
+
+  .botonera {
+    display: none;
+  }
+
+  #btnConfiguraciones {
+    display: block;
+  }
+
+
+
+  #todos table {
+    margin: 0% 0% 5% 0%;
+  }
+  .tablaPartidos .cabecera {
+    padding: 1%;
+    margin-left: 5%;
+  }
+  .tablaPartidos tbody tr td {
+    border-bottom: 1% solid #ccc;
+    padding: 1.5%;
+  }
+  #destacado button,
+  #todos button,
+  #btnConfiguraciones {
+    color: #420e25;
+    background-color: white;
+    padding: 1%;
+  }
+}
