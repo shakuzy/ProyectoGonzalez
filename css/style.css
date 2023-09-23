@@ -33,6 +33,10 @@ header nav ul li a {
   color: white;
   text-decoration: none;
 }
+
+#menuHamburguesa {
+  display: none;
+}
 /*FIN SECCION HEADER  */
 
 /* INICIO SECCION FOOTER  */
@@ -299,20 +303,23 @@ img {
     flex-direction: column;
   }
 
-  #mainIndex,
-  #destacado,
-  #todos,
-  .botonera {
-    margin: 0;
-  }
-
   main {
     display: flex;
     flex-direction: column;
+    width: 80vw;
+    margin: 10vw;
+    justify-content: center;
   }
-  #destacado,
+
+  #destacado {
+    margin-bottom: 15%;
+    margin-left: 1%;
+    width: 100%;
+  }
+
   #todos {
-    width: 0;
+    width: 80%;
+    margin: 10% 10vw;
   }
 
   .tablaPartidos tbody tr td {
@@ -325,26 +332,56 @@ img {
 
   #btnConfiguraciones {
     display: block;
+    padding: 5%;
+    margin-bottom: 5%;
   }
 
-
-
+  #destacado table {
+    font-size: 12px;
+  }
   #todos table {
-    margin: 0% 0% 5% 0%;
+    font-size: 10px;
   }
-  .tablaPartidos .cabecera {
-    padding: 1%;
-    margin-left: 5%;
+
+  #todos article,
+  #destacado article {
+    margin-top: 5vw;
   }
-  .tablaPartidos tbody tr td {
-    border-bottom: 1% solid #ccc;
-    padding: 1.5%;
+
+  #menuHamburguesa {
+    display: block;
+    margin-left: 17%;
   }
-  #destacado button,
-  #todos button,
-  #btnConfiguraciones {
-    color: #420e25;
-    background-color: white;
-    padding: 1%;
+
+  header {
+    align-items: center;
   }
+
+  header nav ul {
+    display: none;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    justify-content: space-around;
+    align-items: center;
+    width: 5vh;
+    margin: 40% auto;
+  }
+
+  #columnaFooter1 a img {
+    width: auto;
+    height: auto;
+  }
+
+  #columnaFooter1 a {
+    margin-top: 5%;
+  }
+
+   #columnaFooter2,  #columnaFooter3, #filaFooter1{
+    margin-bottom: 5vh;
+    width: 68vw;
+  } 
 }
