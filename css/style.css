@@ -34,6 +34,10 @@ header nav ul li a {
   text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
 #menuHamburguesa {
   display: none;
 }
@@ -354,10 +358,6 @@ img {
     margin-top: 5vw;
   }
 
-  a {
-    text-decoration: none;
-    color: white;
-  }
   /*header*/
 
   #menuHamburguesa {
