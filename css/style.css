@@ -244,6 +244,10 @@ footer a {
   text-decoration: none;
   color: white;
 }
+
+#botonOpcion {
+  display: none;
+}
 /* FIN SECCION LIGA ARGENTINA */
 
 /* INICIO SECCION DETALLE PARTIDO */
@@ -299,6 +303,8 @@ img {
 /*MEDIA QUERIES INDEX*/
 
 @media screen and (max-width: 600px) {
+  /*index*/
+
   #mainIndex {
     flex-direction: column;
   }
@@ -348,11 +354,20 @@ img {
     margin-top: 5vw;
   }
 
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  /*header*/
+
   #menuHamburguesa {
     display: block;
     margin-left: 17%;
   }
 
+  #menuHamburguesa svg{
+    width: 100%;
+  }
   header {
     align-items: center;
   }
@@ -360,6 +375,7 @@ img {
   header nav ul {
     display: none;
   }
+  /*footer*/
 
   footer {
     display: flex;
@@ -372,7 +388,7 @@ img {
   }
 
   #columnaFooter1 a img {
-    width: auto;
+    width: 80vw;
     height: auto;
   }
 
@@ -380,8 +396,97 @@ img {
     margin-top: 5%;
   }
 
-   #columnaFooter2,  #columnaFooter3, #filaFooter1{
+  #columnaFooter2,
+  #columnaFooter3,
+  #filaFooter1 {
     margin-bottom: 5vh;
     width: 68vw;
-  } 
+  }
+
+  #filaFooter1 {
+    text-align: center;
+  }
+
+  /*liga argentina*/
+
+  #botonOpcion {
+    display: block;
+  }
+
+  #botonOpcion button {
+    width: 100%;
+    padding: 1%;
+    margin: 5% 0;
+  }
+  #ligaArgentina #botonera {
+    display: none;
+  }
+
+  table {
+    font-size: 12px;
+    width: 100%;
+  }
+  #ligaArgentina .tablas {
+    flex-direction: column;
+  }
+
+  #ligaArgentina .tablas .tablaGeneral table tbody tr td,
+  .tablaPartidos tbody tr td {
+    padding: 1%;
+  }
+
+  #ligaArgentina {
+    margin: 0;
+  }
+
+  .tablaGeneral {
+    margin-bottom: 5%;
+  }
+
+  /*partido detalle*/
+
+  /* * {
+    border: 1px solid white;
+  } */
+
+  #estructuraDetalle div table tbody tr td {
+    padding: 1%;
+  }
+
+  #detallePartido {
+    margin: 0;
+  }
+
+  #detalle,
+  #video {
+    width: 100%;
+  }
+
+  #video {
+    margin-top: 5%;
+  }
+
+  /*contacto*/
+
+  /* * {
+    border: 1px solid white;
+  } */
+  
+  #formulario{
+    margin: 0;
+  }
+
+  #formulario form div, #formulario button{
+    width: 100%;
+  }
+
+  #formulario form div input{
+    width: 93%;
+  }
+
+  /*Acerca de nosotros*/
+
+  #quienesSomos{
+    margin: 0;
+  }
 }
