@@ -356,7 +356,6 @@ footer {
 
 @media screen and (max-width: 600px) {
   /*index*/
-
   main {
     display: flex;
     flex-direction: column;
@@ -413,15 +412,14 @@ footer {
   }
 
   /*header*/
-
   header {
     align-items: center;
-    div{
-        a{
-            img{
-                width: 100%;
-            }
+    div {
+      a {
+        img {
+          width: 100%;
         }
+      }
     }
     nav {
       ul {
@@ -438,7 +436,6 @@ footer {
   }
 
   /*footer*/
-
   footer {
     display: flex;
     flex-direction: column;
@@ -467,63 +464,75 @@ footer {
       text-align: center;
     }
   }
-  /*liga argentina*/
 
+  /*liga argentina*/
   #botonOpcion {
     display: block;
+    button {
+      width: 100%;
+      padding: 1%;
+      margin: 5% 0;
+    }
   }
-
-  #botonOpcion button {
-    width: 100%;
-    padding: 1%;
-    margin: 5% 0;
-  }
-  #ligaArgentina #botonera {
-    display: none;
-  }
-
-  table {
-    font-size: 12px;
-    width: 100%;
-  }
-  #ligaArgentina .tablas {
-    flex-direction: column;
-  }
-
-  #ligaArgentina .tablas .tablaGeneral table tbody tr td,
-  .tablaPartidos tbody tr td {
-    padding: 1%;
-  }
-
   #ligaArgentina {
     margin: 0;
-  }
+    #botonera {
+      display: none;
+    }
+    .tablas {
+      flex-direction: column;
+      .tablaGeneral {
+        margin-bottom: 5%;
+        table {
+          font-size: 12px;
+          width: 100%;
+          tbody {
+            tr {
+              td {
+                padding: 1%;
+              }
+            }
+          }
+        }
+      }
+    }
 
-  .tablaGeneral {
-    margin-bottom: 5%;
+    .tablaPartidos {
+      tbody {
+        tr {
+          td {
+            padding: 1%;
+          }
+        }
+      }
+    }
   }
 
   /*partido detalle*/
 
-  /* * {
-      border: 1px solid white;
-    } */
-
-  #estructuraDetalle div table tbody tr td {
-    padding: 1%;
-  }
-
   #detallePartido {
     margin: 0;
-  }
-
-  #detalle,
-  #video {
-    width: 100%;
-  }
-
-  #video {
-    margin-top: 5%;
+    #detalle {
+      width: 100%;
+      #estructuraDetalle {
+        div {
+          table {
+            font-size: 12px;
+            tbody {
+              tr {
+                td {
+                  padding: 1%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #video {
+      width: 100%;
+      margin-top: 5%;
+    }
   }
 
   /*contacto*/
@@ -534,16 +543,23 @@ footer {
 
   #formulario {
     margin: 0;
+    form {
+      div {
+        width: 100%;
+        input {
+          width: 93%;
+        }
+      }
+      button {
+        width: 100%;
+      }
+    }
   }
 
-  #formulario form div,
-  #formulario button {
-    width: 100%;
-  }
-
-  #formulario form div input {
-    width: 93%;
-  }
+  //   #formulario form div,
+  //   #formulario button {
+  //     width: 100%;
+  //   }
 
   /*Acerca de nosotros*/
 

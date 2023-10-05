@@ -419,41 +419,43 @@ footer #filaFooter1 {
     padding: 1%;
     margin: 5% 0;
   }
+  #ligaArgentina {
+    margin: 0;
+  }
   #ligaArgentina #botonera {
     display: none;
-  }
-  table {
-    font-size: 12px;
-    width: 100%;
   }
   #ligaArgentina .tablas {
     flex-direction: column;
   }
-  #ligaArgentina .tablas .tablaGeneral table tbody tr td,
-  .tablaPartidos tbody tr td {
-    padding: 1%;
-  }
-  #ligaArgentina {
-    margin: 0;
-  }
-  .tablaGeneral {
+  #ligaArgentina .tablas .tablaGeneral {
     margin-bottom: 5%;
   }
-  /*partido detalle*/
-  /* * {
-      border: 1px solid white;
-    } */
-  #estructuraDetalle div table tbody tr td {
+  #ligaArgentina .tablas .tablaGeneral table {
+    font-size: 12px;
+    width: 100%;
+  }
+  #ligaArgentina .tablas .tablaGeneral table tbody tr td {
     padding: 1%;
   }
+  #ligaArgentina .tablaPartidos tbody tr td {
+    padding: 1%;
+  }
+  /*partido detalle*/
   #detallePartido {
     margin: 0;
   }
-  #detalle,
-  #video {
+  #detallePartido #detalle {
     width: 100%;
   }
-  #video {
+  #detallePartido #detalle #estructuraDetalle div table {
+    font-size: 12px;
+  }
+  #detallePartido #detalle #estructuraDetalle div table tbody tr td {
+    padding: 1%;
+  }
+  #detallePartido #video {
+    width: 100%;
     margin-top: 5%;
   }
   /*contacto*/
@@ -463,12 +465,14 @@ footer #filaFooter1 {
   #formulario {
     margin: 0;
   }
-  #formulario form div,
-  #formulario button {
+  #formulario form div {
     width: 100%;
   }
   #formulario form div input {
     width: 93%;
+  }
+  #formulario form button {
+    width: 100%;
   }
   /*Acerca de nosotros*/
   #quienesSomos {
