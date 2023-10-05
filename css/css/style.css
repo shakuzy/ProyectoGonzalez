@@ -2,9 +2,15 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: #0e422b;
+  color: white;
+}
+
+a {
+  text-decoration: none;
   color: white;
 }
 
@@ -17,7 +23,7 @@ header {
   align-self: center;
   margin: 6vh;
 }
-nav {
+header nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,74 +35,17 @@ header nav ul {
 header nav ul li {
   margin-right: 10px;
 }
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-#menuHamburguesa {
+header nav #menuHamburguesa {
   display: none;
 }
-/*FIN SECCION HEADER  */
 
+/*FIN SECCION HEADER  */
 /* INICIO SECCION FOOTER  */
 footer {
   margin: 12vh 24vh;
   display: grid;
-  grid-template-areas:
-    "columnaFooter1 columnaFooter2 columnaFooter3"
-    "filaFooter1 filaFooter1 filaFooter1";
+  grid-template-areas: "columnaFooter1 columnaFooter2 columnaFooter3" "filaFooter1 filaFooter1 filaFooter1";
   gap: 8%;
-}
-#columnafooter1 {
-  grid-area: columnaFooter1;
-}
-#columnaFooter2 {
-  grid-area: columnaFooter2;
-}
-#columnaFooter3 {
-  grid-area: columnaFooter3;
-}
-#filaFooter1 {
-  grid-area: filaFooter1;
-}
-.grillaSocialMedia img {
-  width: 32px;
-  height: 32px;
-}
-.grillaSocialMedia {
-  display: grid;
-  grid-template-areas:
-    "logoFb logoTw logoIg"
-    "logoWsp logoTele logoLi";
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-  gap: 10% 1%;
-  margin: 5%;
-}
-#logoFb {
-  grid-area: logoFb;
-}
-#logoTw {
-  grid-area: logoTw;
-}
-#logoIg {
-  grid-area: logoIg;
-}
-#logoWsp {
-  grid-area: logoWsp;
-}
-#logoTele {
-  grid-area: logoTele;
-}
-#logoLi {
-  grid-area: logoLi;
 }
 footer div {
   display: flex;
@@ -104,76 +53,125 @@ footer div {
   justify-content: flex-start;
   align-items: center;
 }
-footer a {
-  text-decoration: none;
-  color: white;
+footer #columnafooter1 {
+  grid-area: columnaFooter1;
 }
-/*FIN SECCION FOOTER  */
+footer #columnaFooter2 {
+  grid-area: columnaFooter2;
+}
+footer #columnaFooter3 {
+  grid-area: columnaFooter3;
+}
+footer #filaFooter1 {
+  grid-area: filaFooter1;
+}
 
+.grillaSocialMedia {
+  display: grid;
+  grid-template-areas: "logoFb logoTw logoIg" "logoWsp logoTele logoLi";
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  gap: 10% 1%;
+  margin: 5%;
+}
+.grillaSocialMedia img {
+  width: 32px;
+  height: 32px;
+}
+.grillaSocialMedia #logoFb {
+  grid-area: logoFb;
+}
+.grillaSocialMedia #logoTw {
+  grid-area: logoTw;
+}
+.grillaSocialMedia #logoIg {
+  grid-area: logoIg;
+}
+.grillaSocialMedia #logoWsp {
+  grid-area: logoWsp;
+}
+.grillaSocialMedia #logoTele {
+  grid-area: logoTele;
+}
+.grillaSocialMedia #logoLi {
+  grid-area: logoLi;
+}
+
+/*FIN SECCION FOOTER  */
 /* INICIO SECCION INDEX */
 #btnConfiguraciones {
   display: none;
+  color: #420e25;
+  background-color: white;
+  padding: 1%;
 }
-#mainIndex {
-  display: flex;
-  /* margin: 1% 4% 1% 12%; */
-  justify-content: space-evenly;
-}
-#destacado {
-  margin-left: 8%;
-  width: 37vw;
-}
-#todos {
-  width: 21vw;
-  margin-right: 16%;
-}
-#destacado h1 {
-  margin: 0% 0% 5% 0%;
-}
-#todos h3 {
-  margin: 0% 0% 5% 0%;
-}
+
 .botonera {
   display: flex;
   justify-content: space-between;
   margin: 1vw 13vw;
 }
-#todos table {
+
+#mainIndex {
+  display: flex;
+  /* margin: 1% 4% 1% 12%; */
+  justify-content: space-evenly;
+}
+#mainIndex #destacado {
+  margin-left: 8%;
+  width: 37vw;
+}
+#mainIndex #destacado h1 {
   margin: 0% 0% 5% 0%;
 }
-.tablaPartidos {
+#mainIndex #destacado button {
+  color: #420e25;
+  background-color: white;
+  padding: 1%;
+}
+#mainIndex #todos {
+  width: 21vw;
+  margin-right: 16%;
+}
+#mainIndex #todos h3 {
+  margin: 0% 0% 5% 0%;
+}
+#mainIndex #todos table {
+  margin: 0% 0% 5% 0%;
+}
+#mainIndex #todos button {
+  color: #420e25;
+  background-color: white;
+  padding: 1%;
+}
+#mainIndex .tablaPartidos {
   width: 100%;
 }
-.tablaPartidos .cabecera {
+#mainIndex .tablaPartidos .cabecera {
   background-color: black;
   color: white;
   padding: 10px;
   margin-left: 50px;
 }
-.tablaPartidos tbody tr td {
+#mainIndex .tablaPartidos tbody tr td {
   border-bottom: 1px solid #ccc;
   padding: 15px;
 }
-.dataHora,
-.dataVerMas {
+#mainIndex .tablaPartidos tbody tr .dataVerMas,
+#mainIndex .tablaPartidos tbody tr .dataHora {
   background-color: #420e25;
 }
-.dataEquipo1,
-.dataEquipo2,
-.dataResultado1,
-.dataResultado2 {
+#mainIndex .tablaPartidos tbody tr .dataEquipo1,
+#mainIndex .tablaPartidos tbody tr .dataEquipo2,
+#mainIndex .tablaPartidos tbody tr .dataResultado1,
+#mainIndex .tablaPartidos tbody tr .dataResultado2 {
   background-color: white;
   color: black;
 }
-#destacado button,
-#todos button,
-#btnConfiguraciones {
-  color: #420e25;
-  background-color: white;
-  padding: 1%;
-}
-/* FIN SECCION INDEX */
 
+/* FIN SECCION INDEX */
 /* INICIO SECCION CONTACTO */
 #formulario {
   margin: 12%;
@@ -190,14 +188,14 @@ footer a {
 #formulario form div #consulta {
   padding-bottom: 21%;
 }
-#formulario button {
+#formulario form button {
   width: 95%;
   color: #420e25;
   background-color: white;
   padding: 1%;
 }
-/* FIN SECCION CONTACTO */
 
+/* FIN SECCION CONTACTO */
 /* INICIO SECCION QUIENES SOMOS */
 #quienesSomos {
   margin: 12%;
@@ -205,8 +203,8 @@ footer a {
 #quienesSomos img {
   width: 80vw;
 }
-/* FIN SECCION QUIENES SOMOS */
 
+/* FIN SECCION QUIENES SOMOS */
 /* INICIO SECCION LIGA ARGENTINA */
 #ligaArgentina {
   margin: 5% 12% 12% 12%;
@@ -244,23 +242,46 @@ footer a {
   margin-left: 50px;
   padding: 12px;
 }
-.dataVerMas a {
-  text-decoration: none;
-  color: white;
-}
-
-#botonOpcion {
+#ligaArgentina #botonOpcion {
   display: none;
 }
-/* FIN SECCION LIGA ARGENTINA */
+#ligaArgentina .tablaPartidos {
+  width: 100%;
+}
+#ligaArgentina .tablaPartidos .cabecera {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin-left: 50px;
+}
+#ligaArgentina .tablaPartidos tbody tr td {
+  border-bottom: 1px solid #ccc;
+  padding: 15px;
+}
+#ligaArgentina .tablaPartidos tbody tr .dataVerMas,
+#ligaArgentina .tablaPartidos tbody tr .dataHora {
+  background-color: #420e25;
+}
+#ligaArgentina .tablaPartidos tbody tr .dataEquipo1,
+#ligaArgentina .tablaPartidos tbody tr .dataEquipo2,
+#ligaArgentina .tablaPartidos tbody tr .dataResultado1,
+#ligaArgentina .tablaPartidos tbody tr .dataResultado2 {
+  background-color: white;
+  color: black;
+}
 
+/* FIN SECCION LIGA ARGENTINA */
 /* INICIO SECCION DETALLE PARTIDO */
 #detallePartido {
   margin: 0% 13%;
   display: inline-block;
 }
-img {
-  width: 100%;
+#detallePartido #detalle {
+  display: inline-block;
+  width: 57%;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 #detallePartido #detalle button {
   margin: 3%;
@@ -268,51 +289,39 @@ img {
   background-color: white;
   padding: 1%;
 }
-#detalle {
-  display: inline-block;
-  width: 57%;
-}
-#video {
-  width: 42%;
-  display: inline-block;
-}
-#estructuraDetalle div {
+#detallePartido #detalle #estructuraDetalle div {
   text-align: center;
 }
-#estructuraDetalle div div {
-  display: inline-block;
-}
-#escudo {
-  width: 40px;
-}
-#detalle {
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-}
-#estructuraDetalle div table thead {
+#detallePartido #detalle #estructuraDetalle div table thead {
   background-color: black;
   color: white;
   padding: 12px;
   margin-left: 50px;
 }
-#estructuraDetalle div table tbody tr td {
+#detallePartido #detalle #estructuraDetalle div table tbody tr td {
   background-color: white;
   color: black;
   margin-left: 50px;
   padding: 12px;
 }
+#detallePartido #detalle #estructuraDetalle div div {
+  display: inline-block;
+}
+#detallePartido #detalle #estructuraDetalle div div #escudo {
+  width: 40px;
+}
+#detallePartido #video {
+  width: 42%;
+  display: inline-block;
+}
+#detallePartido #video img {
+  width: 100%;
+}
+
 /* FIN SECCION DETALLE PARTIDO */
-
 /*MEDIA QUERIES INDEX*/
-
 @media screen and (max-width: 600px) {
   /*index*/
-
-  #mainIndex {
-    flex-direction: column;
-  }
-
   main {
     display: flex;
     flex-direction: column;
@@ -320,63 +329,62 @@ img {
     margin: 10vw;
     justify-content: center;
   }
-
-  #destacado {
-    margin-bottom: 15%;
-    margin-left: 1%;
-    width: 100%;
-  }
-
-  #todos {
-    width: 80%;
-    margin: 10% 10vw;
-  }
-
-  .tablaPartidos tbody tr td {
-    padding: 10px;
-  }
-
-  .botonera {
+  main .botonera {
     display: none;
   }
-
-  #btnConfiguraciones {
+  main #btnConfiguraciones {
     display: block;
     padding: 5%;
     margin-bottom: 5%;
   }
-
-  #destacado table {
-    font-size: 12px;
+  main #mainIndex {
+    flex-direction: column;
   }
-  #todos table {
-    font-size: 10px;
-  }
-
-  #todos article,
-  #destacado article {
-    margin-top: 5vw;
-  }
-
-  /*header*/
-
-  #menuHamburguesa {
-    display: block;
-    margin-left: 17%;
-  }
-
-  #menuHamburguesa svg{
+  main #mainIndex #destacado {
+    margin-bottom: 15%;
+    margin-left: 1%;
     width: 100%;
   }
+  main #mainIndex #destacado article {
+    margin-top: 5vw;
+  }
+  main #mainIndex #destacado article .tablaPartidos {
+    font-size: 12px;
+  }
+  main #mainIndex #destacado article .tablaPartidos tbody tr td {
+    padding: 8px;
+  }
+  main #mainIndex #todos {
+    width: 80%;
+    margin: 10% 10vw;
+  }
+  main #mainIndex #todos article {
+    margin-top: 5vw;
+  }
+  main #mainIndex #todos article .tablaPartidos {
+    font-size: 10px;
+  }
+  main #mainIndex #todos article .tablaPartidos tbody tr td {
+    padding: 5px;
+  }
+  /*header*/
   header {
     align-items: center;
   }
-
+  header div a img {
+    width: 100%;
+  }
   header nav ul {
     display: none;
   }
+  header nav #menuHamburguesa {
+    display: block;
+    margin-left: 17%;
+  }
+  header nav #menuHamburguesa svg {
+    width: 100%;
+  }
   /*footer*/
-
   footer {
     display: flex;
     flex-direction: column;
@@ -386,33 +394,26 @@ img {
     width: 5vh;
     margin: 40% auto;
   }
-
-  #columnaFooter1 a img {
+  footer #columnaFooter1 a {
+    margin-top: 5%;
+  }
+  footer #columnaFooter1 a img {
     width: 80vw;
     height: auto;
   }
-
-  #columnaFooter1 a {
-    margin-top: 5%;
-  }
-
-  #columnaFooter2,
-  #columnaFooter3,
-  #filaFooter1 {
+  footer #columnaFooter2,
+  footer #columnaFooter3,
+  footer #filaFooter1 {
     margin-bottom: 5vh;
     width: 68vw;
   }
-
-  #filaFooter1 {
+  footer #filaFooter1 {
     text-align: center;
   }
-
   /*liga argentina*/
-
   #botonOpcion {
     display: block;
   }
-
   #botonOpcion button {
     width: 100%;
     padding: 1%;
@@ -421,7 +422,6 @@ img {
   #ligaArgentina #botonera {
     display: none;
   }
-
   table {
     font-size: 12px;
     width: 100%;
@@ -429,64 +429,51 @@ img {
   #ligaArgentina .tablas {
     flex-direction: column;
   }
-
   #ligaArgentina .tablas .tablaGeneral table tbody tr td,
   .tablaPartidos tbody tr td {
     padding: 1%;
   }
-
   #ligaArgentina {
     margin: 0;
   }
-
   .tablaGeneral {
     margin-bottom: 5%;
   }
-
   /*partido detalle*/
-
   /* * {
-    border: 1px solid white;
-  } */
-
+      border: 1px solid white;
+    } */
   #estructuraDetalle div table tbody tr td {
     padding: 1%;
   }
-
   #detallePartido {
     margin: 0;
   }
-
   #detalle,
   #video {
     width: 100%;
   }
-
   #video {
     margin-top: 5%;
   }
-
   /*contacto*/
-
   /* * {
-    border: 1px solid white;
-  } */
-  
-  #formulario{
+      border: 1px solid white;
+    } */
+  #formulario {
     margin: 0;
   }
-
-  #formulario form div, #formulario button{
+  #formulario form div,
+  #formulario button {
     width: 100%;
   }
-
-  #formulario form div input{
+  #formulario form div input {
     width: 93%;
   }
-
   /*Acerca de nosotros*/
-
-  #quienesSomos{
+  #quienesSomos {
     margin: 0;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
