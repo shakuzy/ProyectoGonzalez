@@ -1,0 +1,48 @@
+header {
+  display: flex;
+  background-color: $colorPrimario;
+  color: $colorLetra;
+  justify-content: space-around;
+  align-self: center;
+  margin: 6vh;
+  @include mobile {
+    align-items: center;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ul {
+      display: flex;
+      list-style-type: none;
+      @include mobile {
+        display: none;
+      }
+      li {
+        margin-right: 10px;
+      }
+    }
+    #menuHamburguesa {
+      display: none;
+      @include mobile{
+        display: block;
+        margin-left: 17%;
+      }
+      svg{
+        @include mobile{
+          width: 100%;
+        }
+      }
+    }
+  }
+  div {
+    a {
+      img {
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+

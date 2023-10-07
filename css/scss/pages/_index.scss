@@ -1,0 +1,141 @@
+#btnConfiguraciones {
+  display: none;
+  color: $colorSecundario;
+  background-color: $colorLetra;
+  padding: 1%;
+  @include mobile {
+    display: block;
+    padding: 5%;
+    margin-bottom: 5%;
+  }
+}
+.botonera {
+  display: flex;
+  justify-content: space-between;
+  margin: 1vw 13vw;
+  @include mobile {
+    display: none;
+  }
+}
+#mainIndex {
+  display: flex;
+  /* margin: 1% 4% 1% 12%; */
+  justify-content: space-evenly;
+  @include mobile {
+    flex-direction: column;
+  }
+  #destacado {
+    margin-left: 8%;
+    width: 37vw;
+    @include mobile {
+      margin-bottom: 15%;
+      margin-left: 1%;
+      width: 100%;
+    }
+    h1 {
+      margin: 0% 0% 5% 0%;
+    }
+    button {
+      color: $colorSecundario;
+      background-color: $colorLetra;
+      padding: 1%;
+    }
+    article {
+      @include mobile {
+        margin-top: 5vw;
+      }
+      .tablaPartidos {
+        @include mobile {
+          font-size: 12px;
+        }
+        tbody {
+          tr {
+            td {
+              @include mobile {
+                padding: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #todos {
+    width: 21vw;
+    margin-right: 16%;
+    @include mobile {
+      width: 80%;
+      margin: 10% 10vw;
+    }
+    h3,
+    table {
+      margin: 0% 0% 5% 0%;
+    }
+    button {
+      color: $colorSecundario;
+      background-color: $colorLetra;
+      padding: 1%;
+    }
+    article {
+      @include mobile {
+        margin-top: 5vw;
+      }
+      .tablaPartidos {
+        @include mobile {
+          font-size: 10px;
+        }
+        tbody {
+          tr {
+            td {
+              @include mobile {
+                padding: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tablaPartidos {
+    width: 100%;
+    .cabecera {
+      background-color: black;
+      color: $colorLetra;
+      padding: 10px;
+      margin-left: 50px;
+    }
+    tbody {
+      tr {
+        td {
+          border-bottom: 1px solid #ccc;
+          padding: 15px;
+        }
+        .dataVerMas,
+        .dataHora {
+          background-color: $colorSecundario;
+        }
+        .dataEquipo1,
+        .dataEquipo2,
+        .dataResultado1,
+        .dataResultado2 {
+          background-color: $colorLetra;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: 10vw;
+    justify-content: center;
+    .botonera {
+      display: none;
+    }
+  }
+}

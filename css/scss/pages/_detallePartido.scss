@@ -1,0 +1,70 @@
+#detallePartido {
+  margin: 0% 13%;
+  display: inline-block;
+  @include mobile {
+    margin: 0;
+  }
+  #detalle {
+    display: inline-block;
+    width: 57%;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    @include mobile {
+      width: 100%;
+    }
+    button {
+      margin: 3%;
+      color: $colorSecundario;
+      background-color: $colorLetra;
+      padding: 1%;
+    }
+    #estructuraDetalle {
+      div {
+        text-align: center;
+        table {
+          @include mobile {
+            font-size: 12px;
+            width: 100%;
+          }
+          thead {
+            background-color: black;
+            color: $colorLetra;
+            padding: 12px;
+            margin-left: 50px;
+          }
+          tbody {
+            tr {
+              td {
+                background-color: $colorLetra;
+                color: black;
+                margin-left: 50px;
+                padding: 12px;
+                @include mobile {
+                  padding: 1%;
+                }
+              }
+            }
+          }
+        }
+        div {
+          display: inline-block;
+          #escudo {
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+  #video {
+    width: 42%;
+    display: inline-block;
+    @include mobile {
+      width: 100%;
+      margin-top: 5%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

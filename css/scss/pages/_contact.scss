@@ -1,0 +1,35 @@
+#formulario {
+  margin: 12%;
+  @include mobile {
+    margin: 0;
+  }
+  form {
+    div {
+      display: inline-block;
+      width: 49%;
+      @include mobile {
+        width: 100%;
+      }
+      input {
+        display: block;
+        width: 86%;
+        padding: 3%;
+        @include mobile {
+          width: 93%;
+        }
+      }
+      #consulta {
+        padding-bottom: 21%;
+      }
+    }
+    button {
+      width: 95%;
+      color: $colorSecundario;
+      background-color: $colorLetra;
+      padding: 1%;
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+}

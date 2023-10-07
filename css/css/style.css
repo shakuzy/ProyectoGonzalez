@@ -14,7 +14,6 @@ a {
   color: white;
 }
 
-/* INICIO SECCION HEADER  */
 header {
   display: flex;
   background-color: #0e422b;
@@ -22,6 +21,11 @@ header {
   justify-content: space-around;
   align-self: center;
   margin: 6vh;
+}
+@media screen and (max-width: 600px) {
+  header {
+    align-items: center;
+  }
 }
 header nav {
   display: flex;
@@ -32,20 +36,50 @@ header nav ul {
   display: flex;
   list-style-type: none;
 }
+@media screen and (max-width: 600px) {
+  header nav ul {
+    display: none;
+  }
+}
 header nav ul li {
   margin-right: 10px;
 }
 header nav #menuHamburguesa {
   display: none;
 }
+@media screen and (max-width: 600px) {
+  header nav #menuHamburguesa {
+    display: block;
+    margin-left: 17%;
+  }
+}
+@media screen and (max-width: 600px) {
+  header nav #menuHamburguesa svg {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  header div a img {
+    width: 100%;
+  }
+}
 
-/*FIN SECCION HEADER  */
-/* INICIO SECCION FOOTER  */
 footer {
   margin: 12vh 24vh;
   display: grid;
   grid-template-areas: "columnaFooter1 columnaFooter2 columnaFooter3" "filaFooter1 filaFooter1 filaFooter1";
   gap: 8%;
+}
+@media screen and (max-width: 600px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    justify-content: space-around;
+    align-items: center;
+    width: 5vh;
+    margin: 40% auto;
+  }
 }
 footer div {
   display: flex;
@@ -56,14 +90,44 @@ footer div {
 footer #columnafooter1 {
   grid-area: columnaFooter1;
 }
+@media screen and (max-width: 600px) {
+  footer #columnafooter1 a {
+    margin-top: 5%;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer #columnafooter1 a img {
+    width: 80vw;
+    height: auto;
+  }
+}
 footer #columnaFooter2 {
   grid-area: columnaFooter2;
+}
+@media screen and (max-width: 600px) {
+  footer #columnaFooter2 {
+    margin-bottom: 5vh;
+    width: 68vw;
+  }
 }
 footer #columnaFooter3 {
   grid-area: columnaFooter3;
 }
+@media screen and (max-width: 600px) {
+  footer #columnaFooter3 {
+    margin-bottom: 5vh;
+    width: 68vw;
+  }
+}
 footer #filaFooter1 {
   grid-area: filaFooter1;
+}
+@media screen and (max-width: 600px) {
+  footer #filaFooter1 {
+    margin-bottom: 5vh;
+    width: 68vw;
+    text-align: center;
+  }
 }
 
 .grillaSocialMedia {
@@ -99,13 +163,18 @@ footer #filaFooter1 {
   grid-area: logoLi;
 }
 
-/*FIN SECCION FOOTER  */
-/* INICIO SECCION INDEX */
 #btnConfiguraciones {
   display: none;
   color: #420e25;
   background-color: white;
   padding: 1%;
+}
+@media screen and (max-width: 600px) {
+  #btnConfiguraciones {
+    display: block;
+    padding: 5%;
+    margin-bottom: 5%;
+  }
 }
 
 .botonera {
@@ -113,15 +182,32 @@ footer #filaFooter1 {
   justify-content: space-between;
   margin: 1vw 13vw;
 }
+@media screen and (max-width: 600px) {
+  .botonera {
+    display: none;
+  }
+}
 
 #mainIndex {
   display: flex;
   /* margin: 1% 4% 1% 12%; */
   justify-content: space-evenly;
 }
+@media screen and (max-width: 600px) {
+  #mainIndex {
+    flex-direction: column;
+  }
+}
 #mainIndex #destacado {
   margin-left: 8%;
   width: 37vw;
+}
+@media screen and (max-width: 600px) {
+  #mainIndex #destacado {
+    margin-bottom: 15%;
+    margin-left: 1%;
+    width: 100%;
+  }
 }
 #mainIndex #destacado h1 {
   margin: 0% 0% 5% 0%;
@@ -131,13 +217,32 @@ footer #filaFooter1 {
   background-color: white;
   padding: 1%;
 }
+@media screen and (max-width: 600px) {
+  #mainIndex #destacado article {
+    margin-top: 5vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  #mainIndex #destacado article .tablaPartidos {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #mainIndex #destacado article .tablaPartidos tbody tr td {
+    padding: 8px;
+  }
+}
 #mainIndex #todos {
   width: 21vw;
   margin-right: 16%;
 }
-#mainIndex #todos h3 {
-  margin: 0% 0% 5% 0%;
+@media screen and (max-width: 600px) {
+  #mainIndex #todos {
+    width: 80%;
+    margin: 10% 10vw;
+  }
 }
+#mainIndex #todos h3,
 #mainIndex #todos table {
   margin: 0% 0% 5% 0%;
 }
@@ -145,6 +250,21 @@ footer #filaFooter1 {
   color: #420e25;
   background-color: white;
   padding: 1%;
+}
+@media screen and (max-width: 600px) {
+  #mainIndex #todos article {
+    margin-top: 5vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  #mainIndex #todos article .tablaPartidos {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #mainIndex #todos article .tablaPartidos tbody tr td {
+    padding: 5px;
+  }
 }
 #mainIndex .tablaPartidos {
   width: 100%;
@@ -171,19 +291,44 @@ footer #filaFooter1 {
   color: black;
 }
 
-/* FIN SECCION INDEX */
-/* INICIO SECCION CONTACTO */
+@media screen and (max-width: 600px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: 10vw;
+    justify-content: center;
+  }
+  main .botonera {
+    display: none;
+  }
+}
 #formulario {
   margin: 12%;
+}
+@media screen and (max-width: 600px) {
+  #formulario {
+    margin: 0;
+  }
 }
 #formulario form div {
   display: inline-block;
   width: 49%;
 }
+@media screen and (max-width: 600px) {
+  #formulario form div {
+    width: 100%;
+  }
+}
 #formulario form div input {
   display: block;
   width: 86%;
   padding: 3%;
+}
+@media screen and (max-width: 600px) {
+  #formulario form div input {
+    width: 93%;
+  }
 }
 #formulario form div #consulta {
   padding-bottom: 21%;
@@ -194,20 +339,92 @@ footer #filaFooter1 {
   background-color: white;
   padding: 1%;
 }
-
-/* FIN SECCION CONTACTO */
-/* INICIO SECCION QUIENES SOMOS */
-#quienesSomos {
-  margin: 12%;
-}
-#quienesSomos img {
-  width: 80vw;
+@media screen and (max-width: 600px) {
+  #formulario form button {
+    width: 100%;
+  }
 }
 
-/* FIN SECCION QUIENES SOMOS */
-/* INICIO SECCION LIGA ARGENTINA */
+#detallePartido {
+  margin: 0% 13%;
+  display: inline-block;
+}
+@media screen and (max-width: 600px) {
+  #detallePartido {
+    margin: 0;
+  }
+}
+#detallePartido #detalle {
+  display: inline-block;
+  width: 57%;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+@media screen and (max-width: 600px) {
+  #detallePartido #detalle {
+    width: 100%;
+  }
+}
+#detallePartido #detalle button {
+  margin: 3%;
+  color: #420e25;
+  background-color: white;
+  padding: 1%;
+}
+#detallePartido #detalle #estructuraDetalle div {
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  #detallePartido #detalle #estructuraDetalle div table {
+    font-size: 12px;
+    width: 100%;
+  }
+}
+#detallePartido #detalle #estructuraDetalle div table thead {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  margin-left: 50px;
+}
+#detallePartido #detalle #estructuraDetalle div table tbody tr td {
+  background-color: white;
+  color: black;
+  margin-left: 50px;
+  padding: 12px;
+}
+@media screen and (max-width: 600px) {
+  #detallePartido #detalle #estructuraDetalle div table tbody tr td {
+    padding: 1%;
+  }
+}
+#detallePartido #detalle #estructuraDetalle div div {
+  display: inline-block;
+}
+#detallePartido #detalle #estructuraDetalle div div #escudo {
+  width: 40px;
+}
+#detallePartido #video {
+  width: 42%;
+  display: inline-block;
+}
+@media screen and (max-width: 600px) {
+  #detallePartido #video {
+    width: 100%;
+    margin-top: 5%;
+  }
+}
+#detallePartido #video img {
+  width: 100%;
+}
+
 #ligaArgentina {
   margin: 5% 12% 12% 12%;
+}
+@media screen and (max-width: 600px) {
+  #ligaArgentina {
+    margin: 0;
+  }
 }
 #ligaArgentina #tituloImg {
   display: flex;
@@ -221,6 +438,11 @@ footer #filaFooter1 {
   justify-content: space-around;
   margin: 2vw 0vw;
 }
+@media screen and (max-width: 600px) {
+  #ligaArgentina #botonera {
+    display: none;
+  }
+}
 #ligaArgentina #botonera button {
   color: #420e25;
   background-color: white;
@@ -229,6 +451,22 @@ footer #filaFooter1 {
 #ligaArgentina .tablas {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  #ligaArgentina .tablas {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+  #ligaArgentina .tablas .tablaGeneral {
+    margin-bottom: 5%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #ligaArgentina .tablas .tablaGeneral table {
+    font-size: 12px;
+    width: 100%;
+  }
 }
 #ligaArgentina .tablas .tablaGeneral table thead {
   background-color: black;
@@ -241,6 +479,11 @@ footer #filaFooter1 {
   color: black;
   margin-left: 50px;
   padding: 12px;
+}
+@media screen and (max-width: 600px) {
+  #ligaArgentina .tablas .tablaGeneral table tbody tr td {
+    padding: 1%;
+  }
 }
 #ligaArgentina #botonOpcion {
   display: none;
@@ -258,6 +501,11 @@ footer #filaFooter1 {
   border-bottom: 1px solid #ccc;
   padding: 15px;
 }
+@media screen and (max-width: 600px) {
+  #ligaArgentina .tablaPartidos tbody tr td {
+    padding: 1%;
+  }
+}
 #ligaArgentina .tablaPartidos tbody tr .dataVerMas,
 #ligaArgentina .tablaPartidos tbody tr .dataHora {
   background-color: #420e25;
@@ -270,214 +518,29 @@ footer #filaFooter1 {
   color: black;
 }
 
-/* FIN SECCION LIGA ARGENTINA */
-/* INICIO SECCION DETALLE PARTIDO */
-#detallePartido {
-  margin: 0% 13%;
-  display: inline-block;
-}
-#detallePartido #detalle {
-  display: inline-block;
-  width: 57%;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-}
-#detallePartido #detalle button {
-  margin: 3%;
-  color: #420e25;
-  background-color: white;
-  padding: 1%;
-}
-#detallePartido #detalle #estructuraDetalle div {
-  text-align: center;
-}
-#detallePartido #detalle #estructuraDetalle div table thead {
-  background-color: black;
-  color: white;
-  padding: 12px;
-  margin-left: 50px;
-}
-#detallePartido #detalle #estructuraDetalle div table tbody tr td {
-  background-color: white;
-  color: black;
-  margin-left: 50px;
-  padding: 12px;
-}
-#detallePartido #detalle #estructuraDetalle div div {
-  display: inline-block;
-}
-#detallePartido #detalle #estructuraDetalle div div #escudo {
-  width: 40px;
-}
-#detallePartido #video {
-  width: 42%;
-  display: inline-block;
-}
-#detallePartido #video img {
-  width: 100%;
-}
-
-/* FIN SECCION DETALLE PARTIDO */
-/*MEDIA QUERIES INDEX*/
 @media screen and (max-width: 600px) {
-  /*index*/
-  main {
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
-    margin: 10vw;
-    justify-content: center;
-  }
-  main .botonera {
-    display: none;
-  }
-  main #btnConfiguraciones {
-    display: block;
-    padding: 5%;
-    margin-bottom: 5%;
-  }
-  main #mainIndex {
-    flex-direction: column;
-  }
-  main #mainIndex #destacado {
-    margin-bottom: 15%;
-    margin-left: 1%;
-    width: 100%;
-  }
-  main #mainIndex #destacado article {
-    margin-top: 5vw;
-  }
-  main #mainIndex #destacado article .tablaPartidos {
-    font-size: 12px;
-  }
-  main #mainIndex #destacado article .tablaPartidos tbody tr td {
-    padding: 8px;
-  }
-  main #mainIndex #todos {
-    width: 80%;
-    margin: 10% 10vw;
-  }
-  main #mainIndex #todos article {
-    margin-top: 5vw;
-  }
-  main #mainIndex #todos article .tablaPartidos {
-    font-size: 10px;
-  }
-  main #mainIndex #todos article .tablaPartidos tbody tr td {
-    padding: 5px;
-  }
-  /*header*/
-  header {
-    align-items: center;
-  }
-  header div a img {
-    width: 100%;
-  }
-  header nav ul {
-    display: none;
-  }
-  header nav #menuHamburguesa {
-    display: block;
-    margin-left: 17%;
-  }
-  header nav #menuHamburguesa svg {
-    width: 100%;
-  }
-  /*footer*/
-  footer {
-    display: flex;
-    flex-direction: column;
-    height: 20vh;
-    justify-content: space-around;
-    align-items: center;
-    width: 5vh;
-    margin: 40% auto;
-  }
-  footer #columnaFooter1 a {
-    margin-top: 5%;
-  }
-  footer #columnaFooter1 a img {
-    width: 80vw;
-    height: auto;
-  }
-  footer #columnaFooter2,
-  footer #columnaFooter3,
-  footer #filaFooter1 {
-    margin-bottom: 5vh;
-    width: 68vw;
-  }
-  footer #filaFooter1 {
-    text-align: center;
-  }
-  /*liga argentina*/
   #botonOpcion {
     display: block;
   }
+}
+@media screen and (max-width: 600px) {
   #botonOpcion button {
     width: 100%;
     padding: 1%;
     margin: 5% 0;
   }
-  #ligaArgentina {
-    margin: 0;
-  }
-  #ligaArgentina #botonera {
-    display: none;
-  }
-  #ligaArgentina .tablas {
-    flex-direction: column;
-  }
-  #ligaArgentina .tablas .tablaGeneral {
-    margin-bottom: 5%;
-  }
-  #ligaArgentina .tablas .tablaGeneral table {
-    font-size: 12px;
-    width: 100%;
-  }
-  #ligaArgentina .tablas .tablaGeneral table tbody tr td {
-    padding: 1%;
-  }
-  #ligaArgentina .tablaPartidos tbody tr td {
-    padding: 1%;
-  }
-  /*partido detalle*/
-  #detallePartido {
-    margin: 0;
-  }
-  #detallePartido #detalle {
-    width: 100%;
-  }
-  #detallePartido #detalle #estructuraDetalle div table {
-    font-size: 12px;
-  }
-  #detallePartido #detalle #estructuraDetalle div table tbody tr td {
-    padding: 1%;
-  }
-  #detallePartido #video {
-    width: 100%;
-    margin-top: 5%;
-  }
-  /*contacto*/
-  /* * {
-      border: 1px solid white;
-    } */
-  #formulario {
-    margin: 0;
-  }
-  #formulario form div {
-    width: 100%;
-  }
-  #formulario form div input {
-    width: 93%;
-  }
-  #formulario form button {
-    width: 100%;
-  }
-  /*Acerca de nosotros*/
+}
+
+#quienesSomos {
+  margin: 12%;
+}
+@media screen and (max-width: 600px) {
   #quienesSomos {
     margin: 0;
   }
+}
+#quienesSomos img {
+  width: 80vw;
 }
 
 /*# sourceMappingURL=style.css.map */

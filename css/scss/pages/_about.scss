@@ -1,0 +1,9 @@
+#quienesSomos {
+  margin: 12%;
+  @include mobile{
+    margin: 0;
+  }
+  img {
+    width: 80vw;
+  }
+}

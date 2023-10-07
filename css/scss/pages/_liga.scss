@@ -1,0 +1,110 @@
+#ligaArgentina {
+  margin: 5% 12% 12% 12%;
+  @include mobile {
+    margin: 0;
+  }
+  #tituloImg {
+    display: flex;
+    gap: 1%;
+    img {
+      width: 40px;
+    }
+  }
+  #botonera {
+    display: flex;
+    justify-content: space-around;
+    margin: 2vw 0vw;
+    @include mobile {
+      display: none;
+    }
+    button {
+      color: $colorSecundario;
+      background-color: $colorLetra;
+      padding: 1%;
+    }
+  }
+  .tablas {
+    display: flex;
+    justify-content: space-between;
+    @include mobile {
+      flex-direction: column;
+    }
+    .tablaGeneral {
+      @include mobile {
+        margin-bottom: 5%;
+      }
+      table {
+        @include mobile {
+          font-size: 12px;
+          width: 100%;
+        }
+        thead {
+          background-color: black;
+          color: $colorLetra;
+          padding: 12px;
+          margin-left: 50px;
+        }
+        tbody {
+          tr {
+            td {
+              background-color: #ccc;
+              color: black;
+              margin-left: 50px;
+              padding: 12px;
+              @include mobile {
+                padding: 1%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #botonOpcion {
+    display: none;
+  }
+  .tablaPartidos {
+    width: 100%;
+    .cabecera {
+      background-color: black;
+      color: $colorLetra;
+      padding: 10px;
+      margin-left: 50px;
+    }
+    tbody {
+      tr {
+        td {
+          border-bottom: 1px solid #ccc;
+          padding: 15px;
+          @include mobile{
+            padding: 1%;
+          }
+        }
+        .dataVerMas,
+        .dataHora {
+          background-color: $colorSecundario;
+        }
+        .dataEquipo1,
+        .dataEquipo2,
+        .dataResultado1,
+        .dataResultado2 {
+          background-color: $colorLetra;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+#botonOpcion {
+  @include mobile {
+    display: block;
+  }
+  button {
+    @include mobile {
+      width: 100%;
+      padding: 1%;
+      margin: 5% 0;
+    }
+  }
+}
