@@ -8,33 +8,6 @@ header {
   @include mobile {
     align-items: center;
   }
-  nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    ul {
-      display: flex;
-      list-style-type: none;
-      @include mobile {
-        display: none;
-      }
-      li {
-        margin-right: 10px;
-      }
-    }
-    #menuHamburguesa {
-      display: none;
-      @include mobile{
-        display: block;
-        margin-left: 17%;
-      }
-      svg{
-        @include mobile{
-          width: 100%;
-        }
-      }
-    }
-  }
   div {
     a {
       img {
@@ -44,5 +17,48 @@ header {
       }
     }
   }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #navBar {
+      display: flex;
+      list-style-type: none;
+      @include mobile {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: $colorSecundario;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+      }
+      #cruz {
+        display: none;
+        margin-left: 90%;
+        @include mobile {
+          display: block;
+        }
+      }
+      li {        
+        margin-right: 10px;
+        @include mobile {
+          margin: 3%;
+        }
+      }
+    }
+  }
+  #menuHamburguesa {
+    display: none;
+    @include mobile {
+      display: block;
+      margin-left: 17%;
+    }
+    svg {
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
 }
-

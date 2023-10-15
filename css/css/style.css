@@ -27,39 +27,60 @@ header {
     align-items: center;
   }
 }
+@media screen and (max-width: 600px) {
+  header div a img {
+    width: 100%;
+  }
+}
 header nav {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header nav ul {
+header nav #navBar {
   display: flex;
   list-style-type: none;
 }
 @media screen and (max-width: 600px) {
-  header nav ul {
+  header nav #navBar {
     display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #420e25;
+    flex-direction: column;
+    top: 0;
+    right: 0;
   }
 }
-header nav ul li {
+header nav #navBar #cruz {
+  display: none;
+  margin-left: 90%;
+}
+@media screen and (max-width: 600px) {
+  header nav #navBar #cruz {
+    display: block;
+  }
+}
+header nav #navBar li {
   margin-right: 10px;
 }
-header nav #menuHamburguesa {
+@media screen and (max-width: 600px) {
+  header nav #navBar li {
+    margin: 3%;
+  }
+}
+header #menuHamburguesa {
   display: none;
 }
 @media screen and (max-width: 600px) {
-  header nav #menuHamburguesa {
+  header #menuHamburguesa {
     display: block;
     margin-left: 17%;
   }
 }
 @media screen and (max-width: 600px) {
-  header nav #menuHamburguesa svg {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 600px) {
-  header div a img {
+  header #menuHamburguesa svg {
     width: 100%;
   }
 }

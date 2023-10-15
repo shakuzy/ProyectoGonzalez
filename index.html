@@ -3,10 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="PROMIEDOS.COM.AR ES UN SITIO WEB DEDICADO A BRINDAR INFORMACIÓN Y ESTADÍSTICAS SOBRE DIVERSAS LIGAS DE 
+    <meta
+      name="description"
+      content="PROMIEDOS.COM.AR ES UN SITIO WEB DEDICADO A BRINDAR INFORMACIÓN Y ESTADÍSTICAS SOBRE DIVERSAS LIGAS DE 
     FÚTBOL EN ARGENTINA. PROPORCIONA DATOS ACTUALIZADOS SOBRE LOS RESULTADOS DE LOS PARTIDOS, TABLAS DE 
-    POSICIONES, GOLEADORES Y OTROS DETALLES RELEVANTES DE LAS COMPETICIONES.">
-    <meta name="keywords" content="futbol, liga, deporte, soccer, estadisticas
+    POSICIONES, GOLEADORES Y OTROS DETALLES RELEVANTES DE LAS COMPETICIONES."
+    />
+    <meta
+      name="keywords"
+      content="futbol, liga, deporte, soccer, estadisticas
     dados estatísticos futebol
     futebol stats ao vivo
     soccer stats em português
@@ -25,8 +30,8 @@
     stats estatística
     stats jogadores
     futebol virtual resultados
-    soccer português"/>
-
+    soccer português"
+    />
 
     <link rel="stylesheet" href="./css/css/style.css" />
     <link rel="shortcut icon" href="./assets/img/favicon.ico" />
@@ -41,13 +46,14 @@
         /></a>
       </div>
       <nav>
-        <ul>
+        <ul id="navBar">
+          <li id="cruz" onclick="sidebar_close()"><a>X</a></li>
           <li><a href="#">HOME</a></li>
           <li><a href="./pages/about.html">QUIENES SOMOS</a></li>
           <li><a href="./pages/contact.html">CONTACTO</a></li>
           <li><a href="./pages/liga.html">LIGA</a></li>
         </ul>
-        <div id="menuHamburguesa">
+        <div id="menuHamburguesa" onclick="sidebar_open()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
@@ -333,5 +339,6 @@
         <p>TODOS LOS DERECHOS RESERVADOS - PROMIEDOS - 2023</p>
       </div>
     </footer>
+    <script src="js/myFunctions.js"></script>
   </body>
 </html>
