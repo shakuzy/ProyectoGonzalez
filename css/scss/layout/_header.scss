@@ -57,7 +57,7 @@ header {
     }
     svg {
       @include mobile {
-        width: 100%;
+        width: 50%;
       }
     }
   }

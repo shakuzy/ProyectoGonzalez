@@ -1,7 +1,13 @@
 #formulario {
-  margin: 12%;
+  margin: 5% 12%;
   @include mobile {
     margin: 0;
+  }
+  @include tablet {
+    height: 49vh;
+  }
+  h1 {
+    margin-bottom: 3%;
   }
   form {
     div {
@@ -19,7 +25,22 @@
         }
       }
       #consulta {
-        padding-bottom: 21%;
+        padding-bottom: 52%;
+        @include tablet {
+          padding-bottom: 80%;
+        }
+      }
+      #boxArgentina {
+        display: flex;
+      }
+      #boxSexo {
+        display: flex;
+        #radioSexo {
+          display: flex;
+          justify-content: space-evenly;
+          width: 100%;
+          align-content: stretch;
+        }
       }
     }
     button {

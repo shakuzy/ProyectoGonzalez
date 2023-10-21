@@ -1,11 +1,15 @@
+// * {
+//   border: 1px solid white;
+// }
+
 footer {
-  margin: 12vh 24vh;
+  margin: 12vh 27vh;
   display: grid;
   grid-template-areas:
     "columnaFooter1 columnaFooter2 columnaFooter3"
     "filaFooter1 filaFooter1 filaFooter1";
   gap: 8%;
-  @include mobile{
+  @include mobile {
     display: flex;
     flex-direction: column;
     height: 20vh;
@@ -14,20 +18,22 @@ footer {
     width: 5vh;
     margin: 40% auto;
   }
+  @include tablet {
+    margin: 5% 6vh;
+  }
   div {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
   }
-  #columnafooter1 {
+  #columnaFooter1 {
     grid-area: columnaFooter1;
-    a{
-      @include mobile{
+    a {
+      @include mobile {
         margin-top: 5%;
       }
-      img{
-        @include mobile{
+      img {
+        @include mobile {
           width: 80vw;
           height: auto;
         }
@@ -36,24 +42,23 @@ footer {
   }
   #columnaFooter2 {
     grid-area: columnaFooter2;
-    @include mobile{
+    @include mobile {
       margin-bottom: 5vh;
-      width: 68vw;
+      width: 80vw;
     }
   }
   #columnaFooter3 {
     grid-area: columnaFooter3;
-    @include mobile{
+    @include mobile {
       margin-bottom: 5vh;
-      width: 68vw;
+      width: 80vw;
     }
   }
   #filaFooter1 {
     grid-area: filaFooter1;
-    @include mobile{
+    @include mobile {
       margin-bottom: 5vh;
-      width: 68vw;
-      text-align: center;
+      width: 80vw;
     }
   }
 }
@@ -63,11 +68,10 @@ footer {
     "logoFb logoTw logoIg"
     "logoWsp logoTele logoLi";
   align-content: center;
-  justify-content: center;
   align-items: center;
   justify-items: center;
   gap: 10% 1%;
-  margin: 5%;
+  margin: 5% 0%;
   img {
     width: 32px;
     height: 32px;
@@ -91,4 +95,3 @@ footer {
     grid-area: logoLi;
   }
 }
-

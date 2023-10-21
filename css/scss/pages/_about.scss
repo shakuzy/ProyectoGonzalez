@@ -1,9 +1,15 @@
 #quienesSomos {
-  margin: 12%;
-  @include mobile{
+  margin: 5% 12%;
+  @include mobile {
     margin: 0;
+  }
+  @include tablet {
+    height: 62vh;
   }
   img {
     width: 80vw;
+    @include tablet {
+      width: 75vw;
+    }
   }
 }

@@ -6,18 +6,18 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: #0e422b;
-  color: white;
+  color: #e0f0ec;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: #e0f0ec;
 }
 
 header {
   display: flex;
   background-color: #0e422b;
-  color: white;
+  color: #e0f0ec;
   justify-content: space-around;
   align-self: center;
   margin: 6vh;
@@ -47,7 +47,7 @@ header nav #navBar {
     width: 100%;
     height: 100%;
     position: fixed;
-    background: #420e25;
+    background: #2b0e42;
     flex-direction: column;
     top: 0;
     right: 0;
@@ -81,12 +81,82 @@ header #menuHamburguesa {
 }
 @media screen and (max-width: 600px) {
   header #menuHamburguesa svg {
-    width: 100%;
+    width: 50%;
   }
 }
 
+.card-group {
+  font-size: medium;
+}
+@media screen and (max-width: 600px) {
+  .card-group {
+    font-size: small;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .card-group {
+    font-size: small;
+  }
+}
+.card-group .ligaCopa {
+  background-color: black;
+  padding: 2%;
+  margin-bottom: 2%;
+}
+.card-group .card-container {
+  display: grid;
+  grid-template-areas: "equipoUno escudoUno fechaHora escudoDos equipoDos" "equipoUno escudoUno fechaHora escudoDos equipoDos" "televisora televisora televisora televisora televisora";
+  gap: 0% 2%;
+  color: #2b0e42;
+  background-color: #e0f0ec;
+  margin-bottom: 1%;
+}
+@media screen and (max-width: 600px) {
+  .card-group .card-container {
+    grid-template-areas: "escudoUno equipoUno equipoUno equipoUno fechaHora" "escudoDos equipoDos equipoDos equipoDos fechaHora" "televisora televisora televisora televisora televisora";
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .card-group .card-container {
+    grid-template-areas: "escudoUno equipoUno equipoUno equipoUno fechaHora" "escudoDos equipoDos equipoDos equipoDos fechaHora" "televisora televisora televisora televisora televisora";
+  }
+}
+.card-group .card-container .equipoUno,
+.card-group .card-container .equipoDos,
+.card-group .card-container .fechaHora,
+.card-group .card-container .escudoUno,
+.card-group .card-container .escudoDos {
+  color: #2b0e42;
+  background-color: #e0f0ec;
+  padding: 6%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.card-group .card-container .equipoUno {
+  grid-area: equipoUno;
+}
+.card-group .card-container .escudoUno {
+  grid-area: escudoUno;
+}
+.card-group .card-container .fechaHora {
+  grid-area: fechaHora;
+}
+.card-group .card-container .escudoDos {
+  grid-area: escudoDos;
+}
+.card-group .card-container .equipoDos {
+  grid-area: equipoDos;
+}
+.card-group .card-container .televisora {
+  grid-area: televisora;
+  background-color: #2b0e42;
+  padding: 2%;
+  color: #e0f0ec;
+}
+
 footer {
-  margin: 12vh 24vh;
+  margin: 12vh 27vh;
   display: grid;
   grid-template-areas: "columnaFooter1 columnaFooter2 columnaFooter3" "filaFooter1 filaFooter1 filaFooter1";
   gap: 8%;
@@ -102,22 +172,26 @@ footer {
     margin: 40% auto;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  footer {
+    margin: 5% 6vh;
+  }
+}
 footer div {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
 }
-footer #columnafooter1 {
+footer #columnaFooter1 {
   grid-area: columnaFooter1;
 }
 @media screen and (max-width: 600px) {
-  footer #columnafooter1 a {
+  footer #columnaFooter1 a {
     margin-top: 5%;
   }
 }
 @media screen and (max-width: 600px) {
-  footer #columnafooter1 a img {
+  footer #columnaFooter1 a img {
     width: 80vw;
     height: auto;
   }
@@ -128,7 +202,7 @@ footer #columnaFooter2 {
 @media screen and (max-width: 600px) {
   footer #columnaFooter2 {
     margin-bottom: 5vh;
-    width: 68vw;
+    width: 80vw;
   }
 }
 footer #columnaFooter3 {
@@ -137,7 +211,7 @@ footer #columnaFooter3 {
 @media screen and (max-width: 600px) {
   footer #columnaFooter3 {
     margin-bottom: 5vh;
-    width: 68vw;
+    width: 80vw;
   }
 }
 footer #filaFooter1 {
@@ -146,8 +220,7 @@ footer #filaFooter1 {
 @media screen and (max-width: 600px) {
   footer #filaFooter1 {
     margin-bottom: 5vh;
-    width: 68vw;
-    text-align: center;
+    width: 80vw;
   }
 }
 
@@ -155,11 +228,10 @@ footer #filaFooter1 {
   display: grid;
   grid-template-areas: "logoFb logoTw logoIg" "logoWsp logoTele logoLi";
   align-content: center;
-  justify-content: center;
   align-items: center;
   justify-items: center;
   gap: 10% 1%;
-  margin: 5%;
+  margin: 5% 0%;
 }
 .grillaSocialMedia img {
   width: 32px;
@@ -186,8 +258,8 @@ footer #filaFooter1 {
 
 #btnConfiguraciones {
   display: none;
-  color: #420e25;
-  background-color: white;
+  color: #2b0e42;
+  background-color: #e0f0ec;
   padding: 1%;
 }
 @media screen and (max-width: 600px) {
@@ -202,6 +274,9 @@ footer #filaFooter1 {
   display: flex;
   justify-content: space-between;
   margin: 1vw 13vw;
+}
+.botonera button {
+  padding: 1%;
 }
 @media screen and (max-width: 600px) {
   .botonera {
@@ -220,8 +295,8 @@ footer #filaFooter1 {
   }
 }
 #mainIndex #destacado {
-  margin-left: 8%;
-  width: 37vw;
+  margin-left: 5%;
+  width: 40vw;
 }
 @media screen and (max-width: 600px) {
   #mainIndex #destacado {
@@ -234,28 +309,13 @@ footer #filaFooter1 {
   margin: 0% 0% 5% 0%;
 }
 #mainIndex #destacado button {
-  color: #420e25;
-  background-color: white;
+  color: #2b0e42;
+  background-color: #e0f0ec;
   padding: 1%;
 }
-@media screen and (max-width: 600px) {
-  #mainIndex #destacado article {
-    margin-top: 5vw;
-  }
-}
-@media screen and (max-width: 600px) {
-  #mainIndex #destacado article .tablaPartidos {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 600px) {
-  #mainIndex #destacado article .tablaPartidos tbody tr td {
-    padding: 8px;
-  }
-}
 #mainIndex #todos {
-  width: 21vw;
-  margin-right: 16%;
+  width: 23vw;
+  margin-right: 4%;
 }
 @media screen and (max-width: 600px) {
   #mainIndex #todos {
@@ -268,31 +328,19 @@ footer #filaFooter1 {
   margin: 0% 0% 5% 0%;
 }
 #mainIndex #todos button {
-  color: #420e25;
-  background-color: white;
+  color: #2b0e42;
+  background-color: #e0f0ec;
   padding: 1%;
 }
-@media screen and (max-width: 600px) {
-  #mainIndex #todos article {
-    margin-top: 5vw;
-  }
-}
-@media screen and (max-width: 600px) {
-  #mainIndex #todos article .tablaPartidos {
-    font-size: 10px;
-  }
-}
-@media screen and (max-width: 600px) {
-  #mainIndex #todos article .tablaPartidos tbody tr td {
-    padding: 5px;
-  }
+#mainIndex #todos article .card-group {
+  font-size: small;
 }
 #mainIndex .tablaPartidos {
   width: 100%;
 }
 #mainIndex .tablaPartidos .cabecera {
   background-color: black;
-  color: white;
+  color: #e0f0ec;
   padding: 10px;
   margin-left: 50px;
 }
@@ -302,13 +350,13 @@ footer #filaFooter1 {
 }
 #mainIndex .tablaPartidos tbody tr .dataVerMas,
 #mainIndex .tablaPartidos tbody tr .dataHora {
-  background-color: #420e25;
+  background-color: #2b0e42;
 }
 #mainIndex .tablaPartidos tbody tr .dataEquipo1,
 #mainIndex .tablaPartidos tbody tr .dataEquipo2,
 #mainIndex .tablaPartidos tbody tr .dataResultado1,
 #mainIndex .tablaPartidos tbody tr .dataResultado2 {
-  background-color: white;
+  background-color: #e0f0ec;
   color: black;
 }
 
@@ -325,12 +373,20 @@ footer #filaFooter1 {
   }
 }
 #formulario {
-  margin: 12%;
+  margin: 5% 12%;
 }
 @media screen and (max-width: 600px) {
   #formulario {
     margin: 0;
   }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #formulario {
+    height: 49vh;
+  }
+}
+#formulario h1 {
+  margin-bottom: 3%;
 }
 #formulario form div {
   display: inline-block;
@@ -352,12 +408,29 @@ footer #filaFooter1 {
   }
 }
 #formulario form div #consulta {
-  padding-bottom: 21%;
+  padding-bottom: 52%;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #formulario form div #consulta {
+    padding-bottom: 80%;
+  }
+}
+#formulario form div #boxArgentina {
+  display: flex;
+}
+#formulario form div #boxSexo {
+  display: flex;
+}
+#formulario form div #boxSexo #radioSexo {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-content: stretch;
 }
 #formulario form button {
   width: 95%;
-  color: #420e25;
-  background-color: white;
+  color: #2b0e42;
+  background-color: #e0f0ec;
   padding: 1%;
 }
 @media screen and (max-width: 600px) {
@@ -367,7 +440,7 @@ footer #filaFooter1 {
 }
 
 #detallePartido {
-  margin: 0% 13%;
+  margin: 5% 13%;
   display: inline-block;
 }
 @media screen and (max-width: 600px) {
@@ -387,10 +460,15 @@ footer #filaFooter1 {
     width: 100%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #detallePartido #detalle {
+    width: 100%;
+  }
+}
 #detallePartido #detalle button {
   margin: 3%;
-  color: #420e25;
-  background-color: white;
+  color: #2b0e42;
+  background-color: #e0f0ec;
   padding: 1%;
 }
 #detallePartido #detalle #estructuraDetalle div {
@@ -402,19 +480,30 @@ footer #filaFooter1 {
     width: 100%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #detallePartido #detalle #estructuraDetalle div table {
+    font-size: 12px;
+    width: 100%;
+  }
+}
 #detallePartido #detalle #estructuraDetalle div table thead {
   background-color: black;
-  color: white;
+  color: #e0f0ec;
   padding: 12px;
   margin-left: 50px;
 }
 #detallePartido #detalle #estructuraDetalle div table tbody tr td {
-  background-color: white;
+  background-color: #e0f0ec;
   color: black;
   margin-left: 50px;
   padding: 12px;
 }
 @media screen and (max-width: 600px) {
+  #detallePartido #detalle #estructuraDetalle div table tbody tr td {
+    padding: 1%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   #detallePartido #detalle #estructuraDetalle div table tbody tr td {
     padding: 1%;
   }
@@ -430,6 +519,12 @@ footer #filaFooter1 {
   display: inline-block;
 }
 @media screen and (max-width: 600px) {
+  #detallePartido #video {
+    width: 100%;
+    margin-top: 5%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   #detallePartido #video {
     width: 100%;
     margin-top: 5%;
@@ -453,6 +548,7 @@ footer #filaFooter1 {
 }
 #ligaArgentina #tituloImg img {
   width: 40px;
+  object-fit: contain;
 }
 #ligaArgentina #botonera {
   display: flex;
@@ -465,8 +561,8 @@ footer #filaFooter1 {
   }
 }
 #ligaArgentina #botonera button {
-  color: #420e25;
-  background-color: white;
+  color: #2b0e42;
+  background-color: #e0f0ec;
   padding: 1%;
 }
 #ligaArgentina .tablas {
@@ -478,9 +574,24 @@ footer #filaFooter1 {
     flex-direction: column;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #ligaArgentina .tablas {
+    flex-direction: column;
+  }
+}
+#ligaArgentina .tablas .tablaGeneral {
+  width: 45%;
+}
 @media screen and (max-width: 600px) {
   #ligaArgentina .tablas .tablaGeneral {
     margin-bottom: 5%;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #ligaArgentina .tablas .tablaGeneral {
+    margin-bottom: 5%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 600px) {
@@ -489,9 +600,15 @@ footer #filaFooter1 {
     width: 100%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #ligaArgentina .tablas .tablaGeneral table {
+    font-size: 12px;
+    width: 100%;
+  }
+}
 #ligaArgentina .tablas .tablaGeneral table thead {
   background-color: black;
-  color: white;
+  color: #e0f0ec;
   padding: 12px;
   margin-left: 50px;
 }
@@ -506,6 +623,24 @@ footer #filaFooter1 {
     padding: 1%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #ligaArgentina .tablas .tablaGeneral table tbody tr td {
+    padding: 1%;
+  }
+}
+#ligaArgentina .tablas .listadoPartidos {
+  width: 45%;
+}
+@media screen and (max-width: 600px) {
+  #ligaArgentina .tablas .listadoPartidos {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #ligaArgentina .tablas .listadoPartidos {
+    width: 100%;
+  }
+}
 #ligaArgentina #botonOpcion {
   display: none;
 }
@@ -514,7 +649,7 @@ footer #filaFooter1 {
 }
 #ligaArgentina .tablaPartidos .cabecera {
   background-color: black;
-  color: white;
+  color: #e0f0ec;
   padding: 10px;
   margin-left: 50px;
 }
@@ -529,13 +664,13 @@ footer #filaFooter1 {
 }
 #ligaArgentina .tablaPartidos tbody tr .dataVerMas,
 #ligaArgentina .tablaPartidos tbody tr .dataHora {
-  background-color: #420e25;
+  background-color: #2b0e42;
 }
 #ligaArgentina .tablaPartidos tbody tr .dataEquipo1,
 #ligaArgentina .tablaPartidos tbody tr .dataEquipo2,
 #ligaArgentina .tablaPartidos tbody tr .dataResultado1,
 #ligaArgentina .tablaPartidos tbody tr .dataResultado2 {
-  background-color: white;
+  background-color: #e0f0ec;
   color: black;
 }
 
@@ -553,15 +688,47 @@ footer #filaFooter1 {
 }
 
 #quienesSomos {
-  margin: 12%;
+  margin: 5% 12%;
 }
 @media screen and (max-width: 600px) {
   #quienesSomos {
     margin: 0;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #quienesSomos {
+    height: 62vh;
+  }
+}
 #quienesSomos img {
   width: 80vw;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #quienesSomos img {
+    width: 75vw;
+  }
+}
+
+#mainError {
+  margin: 0% 15%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  #mainError {
+    flex-direction: column;
+    margin: 5% 10%;
+  }
+}
+#mainError img {
+  height: 80vh;
+}
+@media screen and (max-width: 600px) {
+  #mainError img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

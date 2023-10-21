@@ -13,6 +13,9 @@
   display: flex;
   justify-content: space-between;
   margin: 1vw 13vw;
+  button {
+    padding: 1%;
+  }
   @include mobile {
     display: none;
   }
@@ -25,8 +28,8 @@
     flex-direction: column;
   }
   #destacado {
-    margin-left: 8%;
-    width: 37vw;
+    margin-left: 5%;
+    width: 40vw;
     @include mobile {
       margin-bottom: 15%;
       margin-left: 1%;
@@ -40,29 +43,10 @@
       background-color: $colorLetra;
       padding: 1%;
     }
-    article {
-      @include mobile {
-        margin-top: 5vw;
-      }
-      .tablaPartidos {
-        @include mobile {
-          font-size: 12px;
-        }
-        tbody {
-          tr {
-            td {
-              @include mobile {
-                padding: 8px;
-              }
-            }
-          }
-        }
-      }
-    }
   }
   #todos {
-    width: 21vw;
-    margin-right: 16%;
+    width: 23vw;
+    margin-right: 4%;
     @include mobile {
       width: 80%;
       margin: 10% 10vw;
@@ -77,22 +61,8 @@
       padding: 1%;
     }
     article {
-      @include mobile {
-        margin-top: 5vw;
-      }
-      .tablaPartidos {
-        @include mobile {
-          font-size: 10px;
-        }
-        tbody {
-          tr {
-            td {
-              @include mobile {
-                padding: 5px;
-              }
-            }
-          }
-        }
+      .card-group{
+        font-size: small;
       }
     }
   }

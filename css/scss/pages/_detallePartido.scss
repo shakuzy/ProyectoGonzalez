@@ -1,5 +1,5 @@
 #detallePartido {
-  margin: 0% 13%;
+  margin: 5% 13%;
   display: inline-block;
   @include mobile {
     margin: 0;
@@ -13,6 +13,9 @@
     @include mobile {
       width: 100%;
     }
+    @include tablet {
+      width: 100%;
+    }
     button {
       margin: 3%;
       color: $colorSecundario;
@@ -24,6 +27,10 @@
         text-align: center;
         table {
           @include mobile {
+            font-size: 12px;
+            width: 100%;
+          }
+          @include tablet {
             font-size: 12px;
             width: 100%;
           }
@@ -43,6 +50,9 @@
                 @include mobile {
                   padding: 1%;
                 }
+                @include tablet {
+                  padding: 1%;
+                }
               }
             }
           }
@@ -60,6 +70,10 @@
     width: 42%;
     display: inline-block;
     @include mobile {
+      width: 100%;
+      margin-top: 5%;
+    }
+    @include tablet {
       width: 100%;
       margin-top: 5%;
     }

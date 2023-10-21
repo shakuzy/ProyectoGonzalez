@@ -1,0 +1,70 @@
+.card-group {
+  font-size: medium;
+  @include mobile {
+    font-size: small;
+  }
+  @include tablet {
+    font-size: small;
+  }
+  .ligaCopa {
+    background-color: black;
+    padding: 2%;
+    margin-bottom: 2%;
+  }
+  .card-container {
+    display: grid;
+    grid-template-areas:
+      "equipoUno escudoUno fechaHora escudoDos equipoDos"
+      "equipoUno escudoUno fechaHora escudoDos equipoDos"
+      "televisora televisora televisora televisora televisora";
+    gap: 0% 2%;
+    color: #2b0e42;
+    background-color: #e0f0ec;
+    margin-bottom: 1%;
+    @include mobile {
+      grid-template-areas:
+        "escudoUno equipoUno equipoUno equipoUno fechaHora"
+        "escudoDos equipoDos equipoDos equipoDos fechaHora"
+        "televisora televisora televisora televisora televisora";
+    }
+    @include tablet {
+      grid-template-areas:
+        "escudoUno equipoUno equipoUno equipoUno fechaHora"
+        "escudoDos equipoDos equipoDos equipoDos fechaHora"
+        "televisora televisora televisora televisora televisora";
+    }
+    .equipoUno,
+    .equipoDos,
+    .fechaHora,
+    .escudoUno,
+    .escudoDos {
+      color: #2b0e42;
+      background-color: #e0f0ec;
+      padding: 6%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+    .equipoUno {
+      grid-area: equipoUno;
+    }
+    .escudoUno {
+      grid-area: escudoUno;
+    }
+    .fechaHora {
+      grid-area: fechaHora;
+    }
+    .escudoDos {
+      grid-area: escudoDos;
+    }
+    .equipoDos {
+      grid-area: equipoDos;
+    }
+    .televisora {
+      grid-area: televisora;
+      background-color: #2b0e42;
+      padding: 2%;
+      color: #e0f0ec;
+    }
+  }
+}
