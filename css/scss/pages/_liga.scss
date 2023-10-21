@@ -79,10 +79,10 @@
 
     .listadoPartidos {
       width: 45%;
-      @include mobile{
+      @include mobile {
         width: 100%;
       }
-      @include tablet{
+      @include tablet {
         width: 100%;
       }
     }
